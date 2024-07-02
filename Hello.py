@@ -12,6 +12,6 @@ class Hello(App):
     
     self.window.add_widget(Image(source = 'logo.png'))
     
-    return self.window()
+    return self.window
     
 Hello().run()
