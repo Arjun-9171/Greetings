@@ -19,7 +19,12 @@ class Hello(App):
     self.window.add_widget(self.user_Input)
     
     self.enter_Input = Button(text = 'Greet', color = 'black', background_color = 'white', bold = True, font_size = 40)
+    self.enter_Input.bind(on_press = self.callback)
     self.window.add_widget(self.enter_Input)
     return self.window
+  
+  def callback(self, instance):
+    self.greetings.text = 'hello ' + self.user_Input.text + '!'
+    
     
 Hello().run()
